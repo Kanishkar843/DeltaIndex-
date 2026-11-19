@@ -1,0 +1,1762 @@
+[
+  {
+    "external_id": "demo-000",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 000.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-001",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 001.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-002",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 002.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-003",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 003.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-004",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 004.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-005",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 01",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 005.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-006",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 006.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-007",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 007.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-008",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 008.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-009",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 009.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-010",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 010.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-011",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 02",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 011.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-012",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 012.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-013",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 013.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-014",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 014.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-015",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 015.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-016",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 016.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-017",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 03",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 017.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-018",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 018.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-019",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 019.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-020",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 020.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-021",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 021.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-022",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 022.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-023",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 04",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 023.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-024",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 024.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-025",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 025.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-026",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 026.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-027",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 027.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-028",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 028.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-029",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 05",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 029.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-030",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 030.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-031",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 031.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-032",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 032.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-033",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 033.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-034",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 034.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-035",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 06",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 035.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-036",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 036.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-037",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 037.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-038",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 038.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-039",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 039.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-040",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 040.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-041",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 07",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 041.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-042",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 042.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-043",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 043.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-044",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 044.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-045",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 045.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-046",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 046.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-047",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 08",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 047.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-048",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 048.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-049",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 049.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-050",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 050.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-051",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 051.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-052",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 052.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-053",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 09",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 053.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-054",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 054.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-055",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 055.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-056",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 056.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-057",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 057.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-058",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 058.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-059",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 10",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 059.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-060",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 060.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-061",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 061.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-062",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 062.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-063",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 063.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-064",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 064.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-065",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 11",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 065.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-066",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 066.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-067",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 067.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-068",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 068.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-069",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 069.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-070",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 070.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-071",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 12",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 071.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-072",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 072.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-073",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 073.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-074",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 074.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-075",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 075.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-076",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 076.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-077",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 13",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 077.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-078",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 078.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-079",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 079.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-080",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 080.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-081",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 081.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-082",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 082.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-083",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 14",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 083.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-084",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 084.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-085",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 085.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-086",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 086.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-087",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 087.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-088",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 088.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-089",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 15",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 089.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-090",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 090.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-091",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 091.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-092",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 092.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-093",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 093.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-094",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 094.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-095",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 16",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 095.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-096",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 096.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-097",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 097.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-098",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 098.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-099",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 099.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-100",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 100.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-101",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 17",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 101.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-102",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 102.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-103",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 103.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-104",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 104.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-105",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 105.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-106",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 106.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-107",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 18",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 107.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-108",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 108.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-109",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 109.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-110",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 110.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-111",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 111.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-112",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 112.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-113",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 19",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 113.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-114",
+    "title": "Python Backend Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build python systems and collaborate on fastapi delivery. Synthetic listing 114.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "python",
+      "sql",
+      "fastapi"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-115",
+    "title": "Data Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build python systems and collaborate on pipelines delivery. Synthetic listing 115.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "sql",
+      "pipelines"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-116",
+    "title": "Frontend Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build react systems and collaborate on typescript delivery. Synthetic listing 116.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-117",
+    "title": "Platform Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build docker systems and collaborate on python delivery. Synthetic listing 117.",
+    "location": "Remote",
+    "remote": true,
+    "seniority": "junior",
+    "skills": [
+      "docker",
+      "linux",
+      "python"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-118",
+    "title": "Search Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build python systems and collaborate on retrieval delivery. Synthetic listing 118.",
+    "location": "Bengaluru",
+    "remote": false,
+    "seniority": "mid",
+    "skills": [
+      "python",
+      "postgresql",
+      "retrieval"
+    ],
+    "synthetic": true
+  },
+  {
+    "external_id": "demo-119",
+    "title": "Quality Engineer",
+    "employer": "Synthetic Studio 20",
+    "description": "Build pytest systems and collaborate on python delivery. Synthetic listing 119.",
+    "location": "Hyderabad",
+    "remote": false,
+    "seniority": "senior",
+    "skills": [
+      "pytest",
+      "python"
+    ],
+    "synthetic": true
+  }
+]
