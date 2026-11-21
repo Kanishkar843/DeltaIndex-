@@ -5,6 +5,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright, expect
 
 root = Path(__file__).resolve().parents[1]
+(root / ".cache").mkdir(exist_ok=True)
 assets = root / "docs/assets"
 assets.mkdir(exist_ok=True)
 with (

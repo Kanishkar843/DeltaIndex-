@@ -24,3 +24,5 @@ Browser coverage: rejected missing token, connection, ingestion of 120 listings,
 Managed Python's OpenSSL downloader crashed. Actual model execution succeeded using pinned, checksum-verified local model files with offline loading; TLS verification was never disabled. The initial three-case benchmark was expanded because its easy labels did not assess preference effects. The six-case artifact is the current benchmark authority. See BENCHMARK.md for limitations.
 
 Docker acceptance uses fixture vectors with real pgvector and Redis; native benchmark separately verifies actual MiniLM inference. See docker-test-output.txt. No live provider or optional Docker-model image result is implied.
+
+GitHub CI first failed because the browser harness assumed an ignored .cache directory existed. The harness now creates its log directory on clean checkouts. This was a CI setup failure, not a passing browser result; the corrected run is tracked separately.
