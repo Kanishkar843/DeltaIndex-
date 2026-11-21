@@ -9,3 +9,5 @@
 - [ ] Execute CI and safely integrate with existing target GitHub history.
 
 Browser outcomes are recorded in TEST_REPORT. This checklist intentionally does not mark the master-prompt assignment complete.
+
+Delivery milestone: tested feature branch pushed and PR created. Final live CI state is linked from README; optional provider checks remain explicitly blocked without credentials.

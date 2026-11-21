@@ -2,7 +2,7 @@
 
 An original job-search workbench with incremental ingestion, PostgreSQL full-text search, pgvector cosine retrieval, reciprocal-rank fusion, explainable preference ranking and Redis invalidation.
 
-**Verified locally:** real CPU Sentence Transformers inference, PostgreSQL 17.12/pgvector 0.8.7, Redis 8.10.3, 11 backend tests, real-service integration, React/TypeScript checks and browser journeys. Docker startup/restart acceptance also passed; feature-branch delivery is in progress. Synthetic listings are labeled throughout; no production traffic or live-feed availability is claimed.
+**Verified locally:** real CPU Sentence Transformers inference, PostgreSQL 17.12/pgvector 0.8.7, Redis 8.10.3, 11 backend tests, real-service integration, React/TypeScript checks and browser journeys. Docker startup/restart acceptance also passed; the verified feature branch and pull request are published. Synthetic listings are labeled throughout; no production traffic or live-feed availability is claimed.
 
 ![Running React dashboard](docs/assets/desktop.png)
 
@@ -82,4 +82,8 @@ Do not use `down -v` if you want to retain data. Docker defaults to the explicit
 
 [Architecture](docs/ARCHITECTURE.md) · [Schema](docs/DATABASE_ERD.md) · [API](docs/API_REFERENCE.md) · [Ingestion](docs/INGESTION_LIFECYCLE.md) · [Retrieval](docs/RETRIEVAL_DESIGN.md) · [Resume verification](docs/RESUME_VERIFICATION.md) · [Attribution](docs/DEPENDENCIES_AND_ATTRIBUTION.md)
 
-Target: https://github.com/Kanishkar843/DeltaIndex-. Existing remote history will be preserved through a feature branch. No completed release is currently published. First-party implementation is original; no project license is assigned without the owner's choice. Third-party notices remain with dependencies.
+Target: https://github.com/Kanishkar843/DeltaIndex-. Existing remote history is preserved in the published feature branch. No completed release is currently published. First-party implementation is original; no project license is assigned without the owner's choice. Third-party notices remain with dependencies.
+
+## GitHub delivery
+
+Published branch: `feat/verified-hybrid-react`. [Review pull request](https://github.com/Kanishkar843/DeltaIndex-/pull/1) · [Current CI results](https://github.com/Kanishkar843/DeltaIndex-/actions). Main was not force-pushed or overwritten. Local acceptance evidence is recorded separately from GitHub checks.

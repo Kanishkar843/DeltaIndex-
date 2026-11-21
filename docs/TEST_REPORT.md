@@ -15,7 +15,7 @@ Updated 2026-11-22. Later results supersede the initial static native demo.
 | Real model retrieval benchmark | PASS; six cases, three modes, with/without preferences, raw samples recorded |
 | Docker build/start/restart | PASS: healthy PostgreSQL/pgvector + Redis + API, 120-job idempotence and persisted jobs after API restart |
 | Live Greenhouse board | NOT RUN; bounded adapter retry/failure tests use mocked transport |
-| GitHub CI/publication | NOT RUN |
+| GitHub CI/publication | Feature branch and PR published; corrected CI runs passed |
 
 The integration test applies Alembic, verifies pgvector, inserts/reingests, changes one description, verifies exactly one embedding refresh, verifies metadata-only vector reuse, Redis miss/hit/invalidation, canonical dedup, three retrieval modes, SQL-injection-resistant filtering and stale deactivation. PostgreSQL 17.12 and pgvector 0.8.7 are native binaries. Redis 8.10.3 is a community Windows build, not official Redis distribution. Docker checks will use Linux images separately.
 
@@ -26,3 +26,5 @@ Managed Python's OpenSSL downloader crashed. Actual model execution succeeded us
 Docker acceptance uses fixture vectors with real pgvector and Redis; native benchmark separately verifies actual MiniLM inference. See docker-test-output.txt. No live provider or optional Docker-model image result is implied.
 
 GitHub CI first failed because the browser harness assumed an ignored .cache directory existed. The harness now creates its log directory on clean checkouts. This was a CI setup failure, not a passing browser result; the corrected run is tracked separately.
+
+Published branch: `feat/verified-hybrid-react`; [PR](https://github.com/Kanishkar843/DeltaIndex-/pull/1), [Actions](https://github.com/Kanishkar843/DeltaIndex-/actions). Existing remote main is an ancestor of the delivered branch. No force push or main overwrite occurred.
