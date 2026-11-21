@@ -1,7 +1,29 @@
-# Retrieval design
+# Retrieval and personalization
 
-PostgreSQL lexical ranking uses `ts_rank_cd(to_tsvector(...), plainto_tsquery(...))`, not BM25. Vector ranking uses cosine distance through pgvector `<=>`. Hybrid score sums `1/(k+rank)` across lexical/vector lists. Missing ranks contribute zero. Default k=60. Filters apply to both lists before fusion. Preference contributions are 0.02 times requested-skill coverage and 0.01 for matching a requested remote preference. The returned result exposes both ranks, base score and feature contributions.
+PostgreSQL uses English `to_tsvector`, `plainto_tsquery`, and `ts_rank_cd`; this is not BM25. pgvector computes cosine similarity. Hybrid reciprocal-rank fusion sums `1/(k+rank)` (default k=60). Location and remote filters apply to both ordered lists before fusion. Canonical duplicates are removed after score ordering. Scores expose lexical/vector ranks, base score, and each preference contribution.
 
-Native test mode substitutes token-overlap lexical ranking and deterministic 64-dimensional hashed vectors. This is not a semantic model. Real Sentence Transformers mode loads all-MiniLM-L6-v2 on CPU; it is implemented but untested. No embedding-model quality claim is supported by fixture results.
+Preferences are requested-skill coverage (default weight .02), requested remote/location/seniority matches (.01 each), and linear 30-day freshness (.005). Profile weights are validated within [0,1]. Keyword/vector base-score scales differ from RRF, so the same preference weights have different relative effects in each mode; inspect the measured personalized benchmark rather than assuming comparable calibration.
 
-PostgreSQL GIN full-text and source/active B-tree indexes are implemented. ANN vector indexing and scale benchmarking remain pending. Redis keys contain the database revision; ingestion changes increment that revision transactionally, so old keys are unreachable and expire after 120 seconds. A query concurrent with ingestion can observe the preceding committed snapshot; the next query sees the new revision. Database failures fail the request rather than fabricating results.
+The real CPU model is `sentence-transformers/all-MiniLM-L6-v2`, 384 normalized dimensions. Explicit fixture mode uses 64-dimensional deterministic hashes and token overlap under SQLite. Fixture results are not semantic inference. PostgreSQL always uses real full-text SQL and pgvector operators, even when vectors are fixtures.
+
+Indexes include GIN full-text, source/active B-tree, and partial dimension-specific HNSW indexes. Current exact ranking reads the candidate corpus; no ANN speedup or large-corpus scaling claim is made. A future bounded SQL candidate stage should be evaluated before scaling beyond the portfolio dataset.
+
+Redis keys include embedding model, database revision and normalized query/filter/weight/pagination inputs. Writes increment revision in the same transaction as content/tombstones. Old keys expire after 120 seconds; no global flush is used. A concurrent read may see the preceding committed snapshot; no stale entry is reachable under a newer revision. Freshness scores can age within the TTL. Cache hits still write a measured retrieval event. Service failures surface rather than return fabricated data.
+
+```mermaid
+sequenceDiagram
+    participant UI as React
+    participant API as Search API
+    participant Cache as Redis
+    participant DB as PostgreSQL pgvector
+    UI->>API: query, filters, profile
+    API->>DB: read revision and profile
+    API->>Cache: model/revision/query key
+    alt cache miss
+        API->>DB: full-text and cosine ordered lists
+        API->>API: filters, RRF, preferences, canonical dedup
+        API->>Cache: result with 120-second TTL
+    end
+    API->>DB: retrieval timing event
+    API-->>UI: matches and score components
+```

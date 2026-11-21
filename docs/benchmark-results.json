@@ -1,65 +1,998 @@
 {
-  "environment": "native SQLite; deterministic hash fixture, NOT transformer semantic benchmark",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "postgres": "PostgreSQL 17.12 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "pgvector": "0.8.7",
+  "redis": "8.10.3",
+  "dataset_sha256": "be1f88c9f7c7ca88e6e23f37662c0715f225543b1d1f724d4e3df800ed2b41f9",
+  "qrels_sha256": "731c4e6e7243ee6581660cf6fb6d8fac42f5ba551968b18615fec594d4e9abff",
+  "dataset_size": 120,
+  "ingest": {
+    "created": 0,
+    "updated": 0,
+    "unchanged": 120,
+    "deactivated": 0,
+    "embeddings": 0
+  },
   "results": [
     {
       "mode": "keyword",
-      "queries": [
-        {
-          "query": "python backend",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "frontend react",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "search retrieval",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        }
+      "personalized": false,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 1575.3124999998818,
+      "cache_samples_ms": [
+        7.856599999968239,
+        7.60590000004413,
+        12.648800000079063,
+        8.099499999843829,
+        23.137399999995978
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-006",
+        "demo-108",
+        "demo-072",
+        "demo-102",
+        "demo-024",
+        "demo-018",
+        "demo-078",
+        "demo-090",
+        "demo-060"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": false,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 217.09480000004078,
+      "cache_samples_ms": [
+        8.123600000089937,
+        12.169399999947927,
+        13.950600000043778,
+        9.54360000014276,
+        12.128699999948367
+      ],
+      "top_external_ids": [
+        "demo-050",
+        "demo-092",
+        "demo-008",
+        "demo-014",
+        "demo-062",
+        "demo-056",
+        "demo-002",
+        "demo-116",
+        "demo-074",
+        "demo-020"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": false,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 242.81949999999597,
+      "cache_samples_ms": [
+        7.124100000055478,
+        6.898000000091997,
+        7.323699999915334,
+        7.2288000001208275,
+        8.721300000161136
+      ],
+      "top_external_ids": [
+        "demo-064",
+        "demo-088",
+        "demo-070",
+        "demo-106",
+        "demo-118",
+        "demo-016",
+        "demo-100",
+        "demo-022",
+        "demo-010",
+        "demo-004"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.1,
+      "ndcg_at_10": 0.31488013066763093,
+      "cold_ms": 72.48660000004747,
+      "cache_samples_ms": [
+        11.79790000014691,
+        11.959300000171424,
+        11.419699999805744,
+        22.44790000008834,
+        11.722599999984595
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-064",
+        "demo-091",
+        "demo-006",
+        "demo-117",
+        "demo-097",
+        "demo-079",
+        "demo-088",
+        "demo-050",
+        "demo-061"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.05,
+      "ndcg_at_10": 0.06625422345438903,
+      "cold_ms": 107.64569999992091,
+      "cache_samples_ms": [
+        11.207800000192947,
+        10.817800000040734,
+        13.916599999902246,
+        12.904899999966801,
+        12.21680000003289
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-064",
+        "demo-091",
+        "demo-006",
+        "demo-117",
+        "demo-097",
+        "demo-079",
+        "demo-088",
+        "demo-050",
+        "demo-061"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.1,
+      "ndcg_at_10": 0.2082936658103318,
+      "cold_ms": 97.5109999999404,
+      "cache_samples_ms": [
+        16.31849999989754,
+        17.192199999954028,
+        14.842100000123537,
+        12.489599999980783,
+        12.662200000022494
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-064",
+        "demo-091",
+        "demo-006",
+        "demo-117",
+        "demo-097",
+        "demo-079",
+        "demo-088",
+        "demo-050",
+        "demo-061"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 81.3293999999587,
+      "cache_samples_ms": [
+        9.121400000140056,
+        9.56739999992351,
+        8.4798000000319,
+        9.265100000220627,
+        8.888300000080562
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-006",
+        "demo-108",
+        "demo-072",
+        "demo-102",
+        "demo-024",
+        "demo-018",
+        "demo-078",
+        "demo-090",
+        "demo-060"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 167.6621999999952,
+      "cache_samples_ms": [
+        16.242800000100033,
+        7.048700000041208,
+        7.61770000008255,
+        8.482299999968745,
+        8.00729999991745
+      ],
+      "top_external_ids": [
+        "demo-050",
+        "demo-092",
+        "demo-008",
+        "demo-014",
+        "demo-062",
+        "demo-056",
+        "demo-002",
+        "demo-116",
+        "demo-074",
+        "demo-020"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 275.81629999986035,
+      "cache_samples_ms": [
+        9.854299999915384,
+        14.932499999986248,
+        7.13869999981398,
+        6.954399999813177,
+        13.661599999977625
+      ],
+      "top_external_ids": [
+        "demo-064",
+        "demo-088",
+        "demo-070",
+        "demo-106",
+        "demo-118",
+        "demo-016",
+        "demo-100",
+        "demo-022",
+        "demo-010",
+        "demo-004"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 157.62069999982486,
+      "cache_samples_ms": [
+        9.689999999864085,
+        9.408900000153153,
+        9.024700000054509,
+        8.907899999940128,
+        8.895299999949202
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-006",
+        "demo-108",
+        "demo-072",
+        "demo-102",
+        "demo-024",
+        "demo-018",
+        "demo-078",
+        "demo-090",
+        "demo-060"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 181.3879999999699,
+      "cache_samples_ms": [
+        24.731199999905584,
+        11.448999999856824,
+        11.432300000024043,
+        15.158599999949729,
+        65.68979999997282
+      ],
+      "top_external_ids": [
+        "demo-050",
+        "demo-092",
+        "demo-008",
+        "demo-014",
+        "demo-062",
+        "demo-056",
+        "demo-002",
+        "demo-116",
+        "demo-074",
+        "demo-020"
+      ]
+    },
+    {
+      "mode": "keyword",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 840.2442000001429,
+      "cache_samples_ms": [
+        59.05299999994895,
+        16.290499999968233,
+        11.315100000047096,
+        39.473600000064835,
+        162.37569999998414
+      ],
+      "top_external_ids": [
+        "demo-064",
+        "demo-088",
+        "demo-070",
+        "demo-106",
+        "demo-118",
+        "demo-016",
+        "demo-100",
+        "demo-022",
+        "demo-010",
+        "demo-004"
       ]
     },
     {
       "mode": "semantic",
-      "queries": [
-        {
-          "query": "python backend",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "frontend react",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "search retrieval",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        }
+      "personalized": false,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 170.1080999998794,
+      "cache_samples_ms": [
+        17.307699999946635,
+        13.949800000091273,
+        15.620299999909548,
+        14.588699999876553,
+        17.338000000108877
+      ],
+      "top_external_ids": [
+        "demo-012",
+        "demo-006",
+        "demo-000",
+        "demo-024",
+        "demo-036",
+        "demo-042",
+        "demo-018",
+        "demo-048",
+        "demo-054",
+        "demo-072"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": false,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 113.13160000008793,
+      "cache_samples_ms": [
+        12.591599999950631,
+        12.83940000007533,
+        13.004099999989194,
+        11.02830000013455,
+        11.389699999881486
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-014",
+        "demo-008",
+        "demo-044",
+        "demo-056",
+        "demo-038",
+        "demo-026",
+        "demo-050",
+        "demo-086",
+        "demo-068"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": false,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 200.3819999999905,
+      "cache_samples_ms": [
+        12.673199999881035,
+        12.618499999916821,
+        13.603800000055344,
+        13.672899999846777,
+        14.303100000006452
+      ],
+      "top_external_ids": [
+        "demo-004",
+        "demo-016",
+        "demo-052",
+        "demo-028",
+        "demo-040",
+        "demo-010",
+        "demo-034",
+        "demo-046",
+        "demo-106",
+        "demo-088"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 96.58280000007835,
+      "cache_samples_ms": [
+        11.478499999839187,
+        11.249700000007579,
+        11.2243999999464,
+        11.238599999842336,
+        12.088200000107463
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-037",
+        "demo-038",
+        "demo-050",
+        "demo-032",
+        "demo-080",
+        "demo-074",
+        "demo-014",
+        "demo-007",
+        "demo-044"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.4,
+      "ndcg_at_10": 0.7948833326720564,
+      "cold_ms": 104.81509999999616,
+      "cache_samples_ms": [
+        12.47319999993124,
+        17.880399999967267,
+        16.395800000054805,
+        12.699200000042765,
+        11.806100000057995
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-037",
+        "demo-038",
+        "demo-050",
+        "demo-032",
+        "demo-080",
+        "demo-074",
+        "demo-014",
+        "demo-007",
+        "demo-044"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 103.00920000008773,
+      "cache_samples_ms": [
+        14.12520000008044,
+        14.75679999998647,
+        15.147699999943143,
+        13.282500000059372,
+        13.137300000153118
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-037",
+        "demo-038",
+        "demo-050",
+        "demo-032",
+        "demo-080",
+        "demo-074",
+        "demo-014",
+        "demo-007",
+        "demo-044"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 89.14690000005976,
+      "cache_samples_ms": [
+        12.92620000003808,
+        12.877399999979389,
+        12.16019999992568,
+        13.558599999896614,
+        13.948300000038216
+      ],
+      "top_external_ids": [
+        "demo-012",
+        "demo-006",
+        "demo-000",
+        "demo-024",
+        "demo-036",
+        "demo-042",
+        "demo-018",
+        "demo-048",
+        "demo-054",
+        "demo-072"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 83.50589999986369,
+      "cache_samples_ms": [
+        13.291999999864856,
+        12.188400000013644,
+        12.99139999991894,
+        13.4150999999747,
+        13.006700000005367
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-014",
+        "demo-008",
+        "demo-044",
+        "demo-056",
+        "demo-038",
+        "demo-026",
+        "demo-050",
+        "demo-086",
+        "demo-068"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 88.7728000000152,
+      "cache_samples_ms": [
+        12.726400000019567,
+        12.594799999988027,
+        12.783599999920625,
+        13.404499999978725,
+        13.51569999997082
+      ],
+      "top_external_ids": [
+        "demo-004",
+        "demo-016",
+        "demo-052",
+        "demo-028",
+        "demo-040",
+        "demo-010",
+        "demo-034",
+        "demo-046",
+        "demo-106",
+        "demo-088"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 103.40949999999793,
+      "cache_samples_ms": [
+        13.371300000017072,
+        13.40089999985139,
+        12.022500000057335,
+        11.44590000012613,
+        13.358100000004924
+      ],
+      "top_external_ids": [
+        "demo-037",
+        "demo-007",
+        "demo-079",
+        "demo-013",
+        "demo-002",
+        "demo-049",
+        "demo-038",
+        "demo-073",
+        "demo-050",
+        "demo-032"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 94.49210000002495,
+      "cache_samples_ms": [
+        11.601899999959642,
+        13.368800000080228,
+        11.842500000057044,
+        10.887200000070152,
+        13.400599999840779
+      ],
+      "top_external_ids": [
+        "demo-002",
+        "demo-038",
+        "demo-050",
+        "demo-032",
+        "demo-080",
+        "demo-074",
+        "demo-014",
+        "demo-044",
+        "demo-062",
+        "demo-008"
+      ]
+    },
+    {
+      "mode": "semantic",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 107.35799999997653,
+      "cache_samples_ms": [
+        13.969900000120106,
+        15.411699999958728,
+        14.783200000010766,
+        14.510500000142201,
+        13.679400000000896
+      ],
+      "top_external_ids": [
+        "demo-037",
+        "demo-007",
+        "demo-079",
+        "demo-013",
+        "demo-049",
+        "demo-073",
+        "demo-067",
+        "demo-002",
+        "demo-031",
+        "demo-038"
       ]
     },
     {
       "mode": "hybrid",
-      "queries": [
-        {
-          "query": "python backend",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "frontend react",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        },
-        {
-          "query": "search retrieval",
-          "recall_at_10": 0.5,
-          "ndcg_at_10": 1.0
-        }
+      "personalized": false,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 93.66789999990033,
+      "cache_samples_ms": [
+        12.742100000195933,
+        13.726300000143965,
+        13.394399999924644,
+        15.208399999892208,
+        15.333599999848957
+      ],
+      "top_external_ids": [
+        "demo-006",
+        "demo-024",
+        "demo-066",
+        "demo-012",
+        "demo-072",
+        "demo-018",
+        "demo-000",
+        "demo-108",
+        "demo-042",
+        "demo-048"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": false,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 90.9570999999687,
+      "cache_samples_ms": [
+        18.000000000029104,
+        16.64689999984148,
+        14.101900000014211,
+        15.000199999803954,
+        15.804899999920963
+      ],
+      "top_external_ids": [
+        "demo-014",
+        "demo-008",
+        "demo-002",
+        "demo-050",
+        "demo-056",
+        "demo-092",
+        "demo-026",
+        "demo-038",
+        "demo-044",
+        "demo-116"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": false,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 96.2973000000602,
+      "cache_samples_ms": [
+        12.380200000052355,
+        15.318900000011126,
+        20.57280000008177,
+        12.09059999996498,
+        12.269599999854108
+      ],
+      "top_external_ids": [
+        "demo-016",
+        "demo-004",
+        "demo-088",
+        "demo-106",
+        "demo-010",
+        "demo-070",
+        "demo-064",
+        "demo-052",
+        "demo-022",
+        "demo-034"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 217.32360000009976,
+      "cache_samples_ms": [
+        17.887299999983952,
+        12.241899999935413,
+        20.806800000173098,
+        11.481700000103956,
+        11.19010000002163
+      ],
+      "top_external_ids": [
+        "demo-037",
+        "demo-050",
+        "demo-079",
+        "demo-014",
+        "demo-097",
+        "demo-002",
+        "demo-061",
+        "demo-091",
+        "demo-008",
+        "demo-067"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.2,
+      "ndcg_at_10": 0.3783033006761697,
+      "cold_ms": 91.92340000004151,
+      "cache_samples_ms": [
+        13.27409999998963,
+        13.103700000101526,
+        13.21020000000317,
+        10.800400000107402,
+        11.93039999998291
+      ],
+      "top_external_ids": [
+        "demo-037",
+        "demo-050",
+        "demo-079",
+        "demo-014",
+        "demo-097",
+        "demo-002",
+        "demo-061",
+        "demo-091",
+        "demo-008",
+        "demo-067"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": false,
+      "query": "engineer",
+      "recall_at_10": 0.0,
+      "ndcg_at_10": 0.0,
+      "cold_ms": 94.33409999996911,
+      "cache_samples_ms": [
+        11.738100000002305,
+        11.661200000162353,
+        11.913999999933367,
+        12.18949999997676,
+        12.664900000117996
+      ],
+      "top_external_ids": [
+        "demo-037",
+        "demo-050",
+        "demo-079",
+        "demo-014",
+        "demo-097",
+        "demo-002",
+        "demo-061",
+        "demo-091",
+        "demo-008",
+        "demo-067"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 112.86679999989246,
+      "cache_samples_ms": [
+        11.956900000086534,
+        14.414200000146593,
+        11.64240000002792,
+        12.681100000008882,
+        16.250599999921178
+      ],
+      "top_external_ids": [
+        "demo-006",
+        "demo-024",
+        "demo-066",
+        "demo-012",
+        "demo-072",
+        "demo-018",
+        "demo-000",
+        "demo-108",
+        "demo-042",
+        "demo-048"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 94.60110000009081,
+      "cache_samples_ms": [
+        12.379799999962415,
+        12.623999999959779,
+        11.637399999926856,
+        11.218499999813503,
+        16.089200000124038
+      ],
+      "top_external_ids": [
+        "demo-014",
+        "demo-008",
+        "demo-002",
+        "demo-050",
+        "demo-056",
+        "demo-092",
+        "demo-026",
+        "demo-038",
+        "demo-044",
+        "demo-116"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 99.09779999998136,
+      "cache_samples_ms": [
+        19.201999999950203,
+        15.890800000079253,
+        15.824000000066007,
+        20.72649999990972,
+        21.98550000002797
+      ],
+      "top_external_ids": [
+        "demo-016",
+        "demo-004",
+        "demo-088",
+        "demo-106",
+        "demo-010",
+        "demo-070",
+        "demo-064",
+        "demo-052",
+        "demo-022",
+        "demo-034"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 146.33939999998802,
+      "cache_samples_ms": [
+        12.119100000063554,
+        14.967699999942852,
+        14.162500000111322,
+        13.721499999974185,
+        13.069499999801337
+      ],
+      "top_external_ids": [
+        "demo-066",
+        "demo-006",
+        "demo-072",
+        "demo-108",
+        "demo-102",
+        "demo-024",
+        "demo-078",
+        "demo-018",
+        "demo-048",
+        "demo-060"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "cold_ms": 105.5429999998978,
+      "cache_samples_ms": [
+        15.568400000120164,
+        12.685400000009395,
+        15.384899999844492,
+        16.290799999978844,
+        15.075400000114314
+      ],
+      "top_external_ids": [
+        "demo-050",
+        "demo-014",
+        "demo-002",
+        "demo-008",
+        "demo-092",
+        "demo-074",
+        "demo-062",
+        "demo-038",
+        "demo-032",
+        "demo-020"
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "personalized": true,
+      "query": "engineer",
+      "recall_at_10": 0.4,
+      "ndcg_at_10": 0.8048109992093389,
+      "cold_ms": 95.80710000000181,
+      "cache_samples_ms": [
+        14.149799999813695,
+        13.748699999950986,
+        13.762799999994968,
+        12.9624999999578,
+        13.236100000085571
+      ],
+      "top_external_ids": [
+        "demo-064",
+        "demo-088",
+        "demo-037",
+        "demo-070",
+        "demo-079",
+        "demo-106",
+        "demo-118",
+        "demo-016",
+        "demo-100",
+        "demo-022"
       ]
     }
-  ]
+  ],
+  "cached_sample_count": 180,
+  "cached_p50_ms": 12.891149999973095,
+  "cached_p95_ms": 20.72649999990972,
+  "process_rss_bytes_end": 484728832,
+  "process_peak_working_set_bytes": 484728832,
+  "wall_seconds": 55.84808380000004,
+  "process_cpu_seconds": 31.609375,
+  "limitations": "Synthetic templated labels, small corpus, single process, warm OS/model; cache latency includes retrieval-event SQL write. Not production traffic or external relevance judgments."
 }

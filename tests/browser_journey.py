@@ -1,55 +1,135 @@
-import subprocess,time,urllib.request,os,secrets,json,sys
+"""Real React journey using only a test-owned server and temporary database."""
+
+import json, os, secrets, socket, subprocess, sys, tempfile, time
 from pathlib import Path
-from playwright.sync_api import sync_playwright,expect
-root=Path(__file__).resolve().parents[2];report=[]
-with sync_playwright() as p:
-    browser=p.chromium.launch(executable_path='C:/Program Files/Google/Chrome/Application/chrome.exe',headless=True)
-    for name,port in [('DeltaIndex',8001)]:
-        directory=root/name;assets=directory/'docs/assets';assets.mkdir(exist_ok=True)
-        token=secrets.token_urlsafe(32);env=os.environ.copy();env['ADMIN_TOKEN']=token;env['DATABASE_URL']='sqlite:///./.cache/browser-demo.db'
-        log=open(directory/'.cache/browser-server.log','w')
-        proc=subprocess.Popen([str(directory/'.venv/Scripts/python.exe'),'-m','uvicorn','app.main:app','--host','127.0.0.1','--port',str(port)],cwd=directory,env=env,stdout=log,stderr=log)
-        context=browser.new_context(viewport={'width':1440,'height':1000});page=context.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+from playwright.sync_api import sync_playwright, expect
+
+root = Path(__file__).resolve().parents[1]
+assets = root / "docs/assets"
+assets.mkdir(exist_ok=True)
+with (
+    tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp,
+    socket.socket() as sock,
+):
+    sock.bind(("127.0.0.1", 0))
+    port = sock.getsockname()[1]
+    sock.close()
+    token = secrets.token_urlsafe(32)
+    env = {
+        **os.environ,
+        "ADMIN_TOKEN": token,
+        "DATABASE_URL": "sqlite:///" + str(Path(tmp) / "browser.db"),
+        "EMBEDDING_MODE": "fixture",
+    }
+    env.pop("REDIS_URL", None)
+    with (root / ".cache/browser-server.log").open("w") as log:
+        proc = subprocess.Popen(
+            [
+                sys.executable,
+                "-m",
+                "uvicorn",
+                "app.main:app",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                str(port),
+            ],
+            cwd=root,
+            env=env,
+            stdout=log,
+            stderr=log,
+        )
         try:
-            for _ in range(20):
-                try: page.request.get(f'http://127.0.0.1:{port}/health',timeout=2000);break
-                except Exception:
-                    if proc.poll() is not None:raise RuntimeError('Server exited; inspect browser-server.log')
-                    time.sleep(1)
-            page.goto(f'http://127.0.0.1:{port}',wait_until='networkidle')
-            if name=='PrefLoom':
-                expect(page.locator('#status')).to_have_text('Up to date.',timeout=30000)
-                page.locator('input[name=key]').fill('location');page.locator('input[name=value]').fill('Remote');page.get_by_role('button',name='Propose preference',exact=True).click()
-                expect(page.get_by_role('button',name='Approve',exact=True)).to_be_visible();page.get_by_role('button',name='Approve',exact=True).click();expect(page.locator('#memory')).to_contain_text('Remote')
-                page.locator('#message').fill('python remote');page.get_by_role('button',name='Explore â†’').click();expect(page.locator('#jobs article')).to_have_count(5)
-                page.reload(wait_until='networkidle');expect(page.locator('#memory')).to_contain_text('Remote')
-                page.locator('#message').fill('python remote');page.get_by_role('button',name='Explore â†’').click();expect(page.locator('#jobs article')).to_have_count(5)
-            elif name=='DeltaIndex':
-                page.locator('#token').fill(token);page.locator('#seed').click();expect(page.locator('#status')).to_contain_text('Ingest:',timeout=30000);expect(page.locator('#results article').first).to_be_visible()
-                page.locator('#seed').click();expect(page.locator('#status')).to_contain_text('"unchanged":120',timeout=30000)
-                page.get_by_role('button',name='Explain score').first.click();expect(page.locator('#explanation')).to_contain_text('lexical_rank')
-                page.locator('#compare').click();expect(page.locator('#status')).to_contain_text('Compared')
-            else:
-                page.locator('#token').fill(token);page.locator('#connect').click();expect(page.locator('#status')).to_have_text('Connected.')
-                page.locator('#seed').click();expect(page.locator('#status')).to_contain_text('registered')
-                page.locator('#run').click();expect(page.locator('#status')).to_contain_text('GATE PASSED',timeout=30000)
-                page.locator('#target').select_option('fixture-regressed');page.locator('#run').click();expect(page.locator('#status')).to_contain_text('RELEASE BLOCKED',timeout=30000)
-                page.locator('#baseline').select_option(index=1);page.locator('#candidate').select_option(index=0);page.locator('#compare').click();expect(page.locator('#comparison')).to_contain_text('"recall_at_5": -1')
-                page.locator('#cases summary').first.click()
-            # Never capture the locally generated admin credential.
-            if name!='PrefLoom':page.locator('#token').fill('')
-            expect(page.locator('#theme')).to_be_enabled(timeout=30000)
-            page.screenshot(path=str(assets/'desktop.png'),full_page=True)
-            page.locator('#theme').click();page.screenshot(path=str(assets/'light.png'),full_page=True)
-            page.set_viewport_size({'width':390,'height':844});page.screenshot(path=str(assets/'mobile.png'),full_page=True)
-            assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'Mobile horizontal overflow'
-            assert not errors,errors
-            report.append({'project':name,'browser':'installed Chrome, headless Playwright','status':'PASSED','screenshots':['docs/assets/desktop.png','docs/assets/light.png','docs/assets/mobile.png'],'console_errors':errors})
-            print(name+' E2E PASSED',flush=True)
-        except Exception as e:
-            report.append({'project':name,'status':'FAILED','error':str(e)});print(name+' E2E FAILED: '+str(e),flush=True)
+            with sync_playwright() as pw:
+                browser = pw.chromium.launch(
+                    executable_path=os.getenv(
+                        "CHROME_PATH",
+                        "C:/Program Files/Google/Chrome/Application/chrome.exe",
+                    ),
+                    headless=True,
+                )
+                page = browser.new_page(viewport={"width": 1440, "height": 1000})
+                errors = []
+                page.on("pageerror", lambda e: errors.append(str(e)))
+                base = f"http://127.0.0.1:{port}"
+                for _ in range(90):
+                    try:
+                        if page.request.get(base + "/ready").ok:
+                            break
+                    except Exception:
+                        pass
+                    if proc.poll() is not None:
+                        raise AssertionError("Test API exited")
+                    time.sleep(0.5)
+                page.goto(base, wait_until="networkidle")
+                page.locator("#seed").click()
+                expect(page.get_by_role("alert")).to_contain_text("Invalid admin token")
+                page.locator("#token").fill(token)
+                page.get_by_role("button", name="Connect controls").click()
+                expect(page.locator("#status")).to_contain_text("Connected")
+                page.locator("#seed").click()
+                expect(page.locator("#status")).to_contain_text(
+                    '"created":120', timeout=30000
+                )
+                expect(page.locator("#results article")).to_have_count(12)
+                page.locator("#seed").click()
+                expect(page.locator("#status")).to_contain_text(
+                    '"unchanged":120', timeout=30000
+                )
+                page.get_by_role("button", name="Explain score").first.click()
+                expect(page.get_by_role("dialog")).to_contain_text("Lexical rank")
+                page.get_by_role("button", name="Useful match", exact=True).click()
+                expect(page.locator("#status")).to_contain_text("Feedback saved")
+                page.get_by_role("button", name="Save search", exact=True).click()
+                expect(page.locator("#status")).to_contain_text("Search saved")
+                page.get_by_role("button", name="Save profile", exact=True).click()
+                expect(page.locator("#status")).to_contain_text("Profile saved")
+                page.locator("#compare").click()
+                expect(page.locator(".comparison article")).to_have_count(3)
+                page.locator("#query").fill("no-such-words")
+                page.get_by_label("Retrieval mode").select_option("keyword")
+                page.get_by_role("button", name="Search →", exact=True).click()
+                expect(page.locator("main")).to_contain_text("No matches")
+                page.locator("#query").fill("python engineer")
+                page.get_by_label("Retrieval mode").select_option("hybrid")
+                page.get_by_role("button", name="Search →", exact=True).click()
+                expect(page.locator("#results article")).to_have_count(12)
+                page.locator("#token").fill("")
+                page.screenshot(path=str(assets / "desktop.png"), full_page=True)
+                page.get_by_role("button", name="Change theme").click()
+                page.screenshot(path=str(assets / "light.png"), full_page=True)
+                page.set_viewport_size({"width": 390, "height": 844})
+                page.screenshot(path=str(assets / "mobile.png"), full_page=True)
+                assert page.evaluate(
+                    "document.documentElement.scrollWidth <= innerWidth"
+                )
+                assert not errors, errors
+                browser.close()
+                (root / "docs/browser-report.json").write_text(
+                    json.dumps(
+                        {
+                            "status": "PASSED",
+                            "frontend": "React TypeScript",
+                            "backend": "SQLite fixture mode, not PostgreSQL integration",
+                            "checks": [
+                                "authorization rejection",
+                                "ingest 120",
+                                "idempotent reingest",
+                                "retrieval",
+                                "score evidence",
+                                "feedback",
+                                "saved searches",
+                                "profiles",
+                                "three-mode comparison",
+                                "empty results",
+                                "dark/light/mobile",
+                            ],
+                            "page_errors": errors,
+                        },
+                        indent=2,
+                    )
+                )
+                print("DeltaIndex React browser journey PASSED")
         finally:
-            context.close();proc.terminate();proc.wait(timeout=15);log.close()
-    browser.close()
-Path(__file__).resolve().parents[1].joinpath('docs/browser-report.json').write_text(json.dumps(report,indent=2))
-if any(r['status']=='FAILED' for r in report):sys.exit(1)
+            proc.terminate()
+            proc.wait(timeout=15)

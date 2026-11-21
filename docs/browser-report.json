@@ -1,11 +1,19 @@
 {
-  "project": "DeltaIndex",
-  "browser": "installed Chrome, headless Playwright",
   "status": "PASSED",
-  "screenshots": [
-    "docs/assets/desktop.png",
-    "docs/assets/light.png",
-    "docs/assets/mobile.png"
+  "frontend": "React TypeScript",
+  "backend": "SQLite fixture mode, not PostgreSQL integration",
+  "checks": [
+    "authorization rejection",
+    "ingest 120",
+    "idempotent reingest",
+    "retrieval",
+    "score evidence",
+    "feedback",
+    "saved searches",
+    "profiles",
+    "three-mode comparison",
+    "empty results",
+    "dark/light/mobile"
   ],
-  "console_errors": []
+  "page_errors": []
 }

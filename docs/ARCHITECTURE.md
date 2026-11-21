@@ -1,27 +1,25 @@
 # DeltaIndex architecture
 
-An incremental synthetic-job index with explainable rank fusion and selective embedding refresh.
+React/TypeScript is built by Vite and served on the FastAPI origin. The API supports an explicit SQLite/hash-fixture demo and a verified PostgreSQL/pgvector/Redis/CPU-MiniLM path. A bounded synchronous ingestion transaction prioritizes atomic snapshots and small-machine operation over large-scale ingestion throughput. PostgreSQL writers serialize on the revision row; the scheduler is intended as one operator process, not a distributed work queue.
 
 ```mermaid
 flowchart LR
-Snapshot --> Validate
-Validate --> ContentHash
-ContentHash --> ChangedEmbedding
-ChangedEmbedding --> PostgreSQL
-PostgreSQL --> FullText
-PostgreSQL --> VectorSearch
-FullText --> RRF
-VectorSearch --> RRF
-RRF --> Preferences
-Preferences --> RevisionKeyedCache
+    Local[JSON / JSONL] --> Adapter
+    Board[Public Greenhouse API] --> Adapter
+    Adapter --> Validate
+    Validate --> Hash[Metadata + text hashes]
+    Hash --> Model[CPU MiniLM or explicit fixture]
+    Model --> PG[PostgreSQL + pgvector]
+    UI[React] --> API[FastAPI]
+    API --> Cache[Redis model/revision key]
+    API --> PG
+    PG --> Lexical[Full-text ranks]
+    PG --> Vector[Cosine ranks]
+    Lexical --> Fusion[RRF + preferences]
+    Vector --> Fusion
+    Fusion --> UI
 ```
 
-The API and UI share one origin, eliminating a separate frontend service for the local demo. FastAPI serves original static assets; SQLAlchemy manages database connections. SQLite is only the explicitly labeled native fallback. PostgreSQL deployment paths are present but unverified.
+Source map: main.py handles validated API/auth; store.py owns transactional indexing, retrieval and cache; core.py owns typed postings, embedding selection and scoring; adapters.py validates public/local inputs; cli.py runs ingestion and scheduling. Frozen Alembic revisions are authoritative for deployed schemas. tests/ contains deterministic tests; integration/ requires real PostgreSQL/Redis. app/benchmark.py measures the explicitly configured real-service path.
 
-## Tradeoffs
-
-Synchronous bounded work keeps resource use modest, at the cost of durable worker execution and multi-instance coordination. Fixture mode makes tests reproducible without credentials. This does not validate an LLM or a semantic embedding model. Production schema, authentication, concurrency and service integration require the remaining acceptance checks.
-
-## Source map
-
-`app/main.py`: REST and UI entry points. Domain logic is in `app/agent.py` + `app/db.py` (PrefLoom), `app/core.py` + `app/store.py` (DeltaIndex), or `app/metrics.py` + `app/engine.py` (EvalTrace). `tests/`: executable native checks. `migrations/`: initial Alembic entry point.
+Tradeoffs: exact retrieval scans candidates and is appropriate for the small corpus; HNSW indexes exist but no ANN speedup is claimed. Metadata is stored as typed serialized payload plus normalized lifecycle entities. Cache invalidation is revision-based with 120-second TTL. Operator authentication is a shared local bearer secret; this is not a multi-tenant product. HTTP/model failures surface explicitly; no simulated live results are substituted.

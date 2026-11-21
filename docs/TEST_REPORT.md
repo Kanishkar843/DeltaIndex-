@@ -1,24 +1,26 @@
-# Test report
+# Executed acceptance report
 
-Date: 2026-11-20, Asia/Kolkata.
+Updated 2026-11-22. Later results supersede the initial static native demo.
 
-| Check | Status | Evidence |
-|---|---|---|
-| Native pytest | PASSED | 6 passed in 8.70s (one upstream TestClient deprecation warning) |
-| JavaScript syntax | PASSED | node --check app/static/app.js |
-| PostgreSQL integration | BLOCKED | No running PostgreSQL service provisioned |
-| Docker/Compose build and workflow | BLOCKED | Docker not available; WSL not installed |
-| Provider model checks | NOT RUN | No live provider mode executed |
-| CI execution | NOT RUN | No push |
-| GitHub publication | BLOCKED | Full mandatory offline checks have not passed |
-| RAM/CPU benchmark | NOT RUN | No resource-performance claims |
+| Check | Actual result |
+|---|---|
+| `python -m pytest -q tests` | PASS: 11 tests, 11.32 seconds |
+| `python -m pytest -q integration` | PASS: 1 real PostgreSQL/pgvector + Redis test, 2.81 seconds |
+| TypeScript typecheck / ESLint | PASS |
+| Vitest | PASS: 2 tests |
+| Vite production build | PASS |
+| Ruff selected correctness rules | PASS |
+| Chrome React browser journey | PASS; desktop/light/mobile screenshots captured |
+| Actual MiniLM encoding | PASS: 384 dimensions, normalized vector |
+| Real model retrieval benchmark | PASS; six cases, three modes, with/without preferences, raw samples recorded |
+| Docker build/start/restart | PASS: healthy PostgreSQL/pgvector + Redis + API, 120-job idempotence and persisted jobs after API restart |
+| Live Greenhouse board | NOT RUN; bounded adapter retry/failure tests use mocked transport |
+| GitHub CI/publication | NOT RUN |
 
-Native pytest checks are reproducible from README. Browser results are appended after execution. This report distinguishes software tests from the expected failure of EvalTrace's regressed release gate.
+The integration test applies Alembic, verifies pgvector, inserts/reingests, changes one description, verifies exactly one embedding refresh, verifies metadata-only vector reuse, Redis miss/hit/invalidation, canonical dedup, three retrieval modes, SQL-injection-resistant filtering and stale deactivation. PostgreSQL 17.12 and pgvector 0.8.7 are native binaries. Redis 8.10.3 is a community Windows build, not official Redis distribution. Docker checks will use Linux images separately.
 
-## Browser and migration evidence
+Browser coverage: rejected missing token, connection, ingestion of 120 listings, unchanged reingestion, retrieval, score drawer, feedback, saved searches, profiles, three-mode comparison, empty results and responsive themes. The browser fixture uses SQLite/hash vectors; it is not reported as PostgreSQL/model integration. Initial browser attempts failed for missing Playwright, then an obsolete theme selector; both were corrected before the passing run.
 
-- PASSED: one sequential Playwright journey in installed Chrome, 1440px desktop and 390px mobile, dark/light screenshots, no uncaught page errors, no horizontal mobile overflow.
-- Screenshots: docs/assets/desktop.png, docs/assets/light.png, docs/assets/mobile.png.
-- PASSED: native SQLite `python -m alembic upgrade head`; this does not verify PostgreSQL.
-- Browser verified seed, idempotent reingest (120 unchanged), search, score explanation and side-by-side mode comparison. Mobile overflow was found and fixed before the passing rerun.
-- PASSED: source scan for private-key and common provider/GitHub-token prefixes found no matches. This is a limited pattern scan, not a full security audit.
+Managed Python's OpenSSL downloader crashed. Actual model execution succeeded using pinned, checksum-verified local model files with offline loading; TLS verification was never disabled. The initial three-case benchmark was expanded because its easy labels did not assess preference effects. The six-case artifact is the current benchmark authority. See BENCHMARK.md for limitations.
+
+Docker acceptance uses fixture vectors with real pgvector and Redis; native benchmark separately verifies actual MiniLM inference. See docker-test-output.txt. No live provider or optional Docker-model image result is implied.
