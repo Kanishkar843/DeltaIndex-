@@ -28,3 +28,7 @@ Docker acceptance uses fixture vectors with real pgvector and Redis; native benc
 GitHub CI first failed because the browser harness assumed an ignored .cache directory existed. The harness now creates its log directory on clean checkouts. This was a CI setup failure, not a passing browser result; the corrected run is tracked separately.
 
 Published branch: `feat/verified-hybrid-react`; [PR](https://github.com/Kanishkar843/DeltaIndex-/pull/1), [Actions](https://github.com/Kanishkar843/DeltaIndex-/actions). Existing remote main is an ancestor of the delivered branch. No force push or main overwrite occurred.
+
+## Production verification — 2026-11-24
+
+See [CLOUD_DELIVERY](CLOUD_DELIVERY.md) for actual Vercel, Neon, provider, browser and model results. Earlier local results above retain their original scope.

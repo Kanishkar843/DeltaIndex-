@@ -1,0 +1,78 @@
+{
+  "environment": "Vercel production, Neon PostgreSQL/pgvector, Upstash Redis",
+  "model": "sentence-transformers/all-MiniLM-L6-v2-onnx-quint8",
+  "dataset": "120 synthetic jobs; six labeled queries",
+  "mode": "hybrid personalized",
+  "mean_recall_at_10": 0.48333333333333334,
+  "mean_ndcg_at_10": 0.9646289390045142,
+  "http_median_ms": 492.21339999894553,
+  "memory": "Not measured inside Vercel; local PyTorch RSS is not applicable",
+  "rows": [
+    {
+      "query": "python backend",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "http_ms": [
+        1202.4807000016153,
+        700.2984999999171,
+        433.18550000185496
+      ],
+      "last_cache": "hit"
+    },
+    {
+      "query": "frontend react",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "http_ms": [
+        487.2775999974692,
+        417.2589000008884,
+        366.4040000003297
+      ],
+      "last_cache": "hit"
+    },
+    {
+      "query": "search retrieval",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "http_ms": [
+        487.9445999977179,
+        408.67749999961234,
+        423.13060000014957
+      ],
+      "last_cache": "hit"
+    },
+    {
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "http_ms": [
+        496.4822000001732,
+        813.4919999974954,
+        469.2759000026854
+      ],
+      "last_cache": "hit"
+    },
+    {
+      "query": "engineer",
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 1.0,
+      "http_ms": [
+        518.353900002694,
+        422.5181999972847,
+        609.0134000005492
+      ],
+      "last_cache": "hit"
+    },
+    {
+      "query": "engineer",
+      "recall_at_10": 0.4,
+      "ndcg_at_10": 0.7877736340270853,
+      "http_ms": [
+        1363.8111000000208,
+        504.71590000233846,
+        522.4932999990415
+      ],
+      "last_cache": "hit"
+    }
+  ]
+}

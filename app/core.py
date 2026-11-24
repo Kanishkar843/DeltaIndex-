@@ -50,7 +50,12 @@ class Embedder:
         self.mode = mode
         self.model = None
         self.version = "fixture-hash-v1"
-        if mode == "sentence-transformers":
+        if mode == "onnx":
+            from .onnx_model import MiniLMOnnx
+
+            self.model = MiniLMOnnx()
+            self.version = "sentence-transformers/all-MiniLM-L6-v2-onnx-quint8"
+        elif mode == "sentence-transformers":
             from .tls import configure_tls
 
             configure_tls()

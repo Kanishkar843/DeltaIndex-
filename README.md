@@ -1,5 +1,12 @@
 # DeltaIndex
 
+[Open live application](https://deltaindex.vercel.app) · [Interactive API](https://deltaindex.vercel.app/docs) · [Cloud verification](docs/CLOUD_DELIVERY.md)
+
+Production uses checksum-verified quantized MiniLM ONNX inference (384 dimensions), Neon PostgreSQL/pgvector full-text and similarity search, reciprocal rank fusion, and Upstash Redis. The native Sentence Transformers implementation remains available. Production is seeded with 120 explicitly synthetic jobs.
+
+![Verified production interface](docs/assets/production-desktop.png)
+
+
 An original job-search workbench with incremental ingestion, PostgreSQL full-text search, pgvector cosine retrieval, reciprocal-rank fusion, explainable preference ranking and Redis invalidation.
 
 **Verified locally:** real CPU Sentence Transformers inference, PostgreSQL 17.12/pgvector 0.8.7, Redis 8.10.3, 11 backend tests, real-service integration, React/TypeScript checks and browser journeys. Docker startup/restart acceptance also passed; the verified feature branch and pull request are published. Synthetic listings are labeled throughout; no production traffic or live-feed availability is claimed.

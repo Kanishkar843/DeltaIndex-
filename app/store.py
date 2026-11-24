@@ -1,3 +1,4 @@
+from .hosting import database_url
 import os, json, hashlib, time
 from uuid import uuid4
 from . import schema
@@ -9,7 +10,7 @@ from .core import Posting, content, digest, Embedder, rrf, preferences, tokens
 class Index:
     def __init__(self, url=None, mode=None, redis_url=None):
         self.engine = create_engine(
-            url or os.getenv("DATABASE_URL", "sqlite:///./deltaindex.db")
+            database_url(url or os.getenv("DATABASE_URL", "sqlite:///./deltaindex.db"))
         )
         self.pg = self.engine.dialect.name == "postgresql"
         self.embedder = Embedder(mode or os.getenv("EMBEDDING_MODE", "fixture"))
