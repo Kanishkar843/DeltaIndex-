@@ -20,3 +20,4 @@ assert (
     hashlib.sha256((root / "model.onnx").read_bytes()).hexdigest()
     == "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21"
 )
+shutil.copyfile("docs/third_party/Apache-2.0.txt", root / "LICENSE")
