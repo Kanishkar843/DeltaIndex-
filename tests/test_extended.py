@@ -118,3 +118,30 @@ def test_metadata_only_change_and_personalization(idx, rows):
         and features["location"] == 0.01
         and features["seniority"] == 0.01
     )
+
+
+def test_greenhouse_long_description_keeps_batch_and_provenance():
+    source_url = "https://example.org/original-job"
+    transport = httpx.MockTransport(
+        lambda _: httpx.Response(
+            200,
+            json={
+                "jobs": [
+                    {
+                        "id": 123,
+                        "title": "Engineer",
+                        "content": "x" * 20000,
+                        "location": {"name": "Remote"},
+                        "absolute_url": source_url,
+                    }
+                ]
+            },
+        )
+    )
+    rows = greenhouse("demo", transport, lambda _: None)
+    assert len(rows) == 1
+    assert len(rows[0]["description"]) == 10000
+    assert rows[0]["description"].endswith(
+        "[Description shortened; see original job URL.]"
+    )
+    assert rows[0]["url"] == source_url and not rows[0]["synthetic"]

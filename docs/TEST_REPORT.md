@@ -32,3 +32,5 @@ Published branch: `feat/verified-hybrid-react`; [PR](https://github.com/Kanishka
 ## Production verification — 2026-11-24
 
 See [CLOUD_DELIVERY](CLOUD_DELIVERY.md) for actual Vercel, Neon, provider, browser and model results. Earlier local results above retain their original scope.
+
+Live Greenhouse adapter check (2026-11-24): first failed ValidationError on oversized descriptions. After bounded, explicitly marked shortening, 633 public postings parsed; 83 shortened; zero persisted. Unit suite now 12 passed in 1.45 seconds.

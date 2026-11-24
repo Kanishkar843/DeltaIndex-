@@ -26,6 +26,11 @@ def plain(value):
     return " ".join(" ".join(parser.parts).split())
 
 
+def bounded_description(value):
+    suffix = " [Description shortened; see original job URL.]"
+    return value if len(value) <= 10000 else value[: 10000 - len(suffix)] + suffix
+
+
 def greenhouse(board, transport=None, sleep=time.sleep):
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", board):
         raise ValueError("Invalid public board token")
@@ -62,7 +67,9 @@ def greenhouse(board, transport=None, sleep=time.sleep):
                         external_id=str(j["id"]),
                         title=j["title"],
                         employer=board,
-                        description=plain(j.get("content", "")) or j["title"],
+                        description=bounded_description(
+                            plain(j.get("content", "")) or j["title"]
+                        ),
                         location=j.get("location", {}).get("name") or "Unspecified",
                         remote="remote"
                         in j.get("location", {}).get("name", "").lower(),

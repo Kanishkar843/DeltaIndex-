@@ -21,11 +21,11 @@ flowchart LR
 - Health/readiness: HTTP 200, actual ONNX MiniLM, PostgreSQL and Redis.
 - First ingestion: 120 created, 120 embeddings. Reingestion: 120 unchanged, zero embeddings.
 - Public hybrid retrieval and browser score explanation: passed.
-- Backend: 11 tests passed; correctness lint passed. Actual ONNX check: dimensions, finite normalized values, repeatability and semantic ordering passed.
+- Backend: 12 tests passed; correctness lint passed. Actual ONNX check: dimensions, finite normalized values, repeatability and semantic ordering passed.
 - Three-sentence ONNX/PyTorch cosine comparison: 0.994441, 0.992294, 0.992147. This small check does not establish quality equivalence.
 - Six labeled synthetic queries, personalized hybrid retrieval: mean Recall@10 0.483333, nDCG@10 0.964629; median HTTP round-trip 492.2134 ms across 18 requests. Network and serverless startup affect this measurement. Cloud RSS was not measured. See production-benchmark.json for raw samples; earlier native benchmark remains separate.
 - Native Sentence Transformers uses PyTorch; Vercel uses ONNX Runtime 1.32.0 and quantized weights from the same pinned model revision. Their model IDs differ to prevent mixing embedding caches.
-- Live Greenhouse synchronization remains unverified; the permitted read-only adapter has mock retry tests.
+- Live Greenhouse public GET adapter: 633 non-synthetic Anthropic postings parsed successfully; 83 descriptions were explicitly shortened to the 10,000-character storage limit while retaining original URLs. No live records were ingested into the benchmark/demo database. The first attempt failed on oversized descriptions; a regression test and bounded normalization fixed it. Scheduled live synchronization remains unverified.
 
 All three applications passed actual Chrome production smoke journeys. Screenshots in docs/assets/production-desktop.png were captured from live deployments with secret fields cleared. Earlier local/Docker/CI evidence remains in TEST_REPORT.md; those checks are not relabeled as cloud checks.
 
@@ -50,3 +50,4 @@ Neon resources use free_v3; Upstash uses free with automatic paid upgrade disabl
 ## Access and limitations
 
 Administrative controls require ADMIN_TOKEN. The owner can retrieve the local value from the ignored .env.production.local file; never publish that token or put it in frontend build variables. This is a single-operator workspace, not multi-tenant account authentication.
+
