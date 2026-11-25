@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "frontend": "React TypeScript",
+  "backend": "SQLite fixture mode, not PostgreSQL integration",
+  "checks": [
+    "authorization rejection",
+    "ingest 120",
+    "idempotent reingest",
+    "retrieval",
+    "score evidence",
+    "feedback",
+    "saved searches",
+    "profiles",
+    "three-mode comparison",
+    "empty results",
+    "dark/light/mobile"
+  ],
+  "page_errors": []
+}

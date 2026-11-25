@@ -1,0 +1,3 @@
+ Container deltaindex-acceptance-api-1 Restarting 
+ Container deltaindex-acceptance-api-1 Started 
+{"postgres_pgvector": "passed", "redis_cache": "passed", "restart_persistence": "passed", "idempotent_120": "passed", "embedding_mode": "fixture-hash-v1"}
