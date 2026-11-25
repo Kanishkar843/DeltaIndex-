@@ -8,6 +8,12 @@
 
 DeltaIndex combines semantic vectors, PostgreSQL full-text search and explicit user preferences into an explainable ranking workflow. Incremental ingestion avoids unnecessary embedding work, while revision-aware Redis caching keeps search results aligned with the index.
 
+## Interface redesign
+
+A teal-and-ink search experience with a dedicated landing page, Search explorer, Source operations, and Saved searches. Results use wider evidence rows, with JSON export and clear-filter controls.
+
+![New DeltaIndex landing page](docs/assets/landing.png)
+
 ## Production preview
 
 ![DeltaIndex running on Vercel](docs/assets/production-desktop.png)

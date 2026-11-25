@@ -63,6 +63,10 @@ with (
                         raise AssertionError("Test API exited")
                     time.sleep(0.5)
                 page.goto(base, wait_until="networkidle")
+                expect(page.get_by_role("heading", name="The right role. The reasoning behind it.")).to_be_visible()
+                page.screenshot(path=str(assets / "landing.png"), full_page=True)
+                page.get_by_role("link", name="Launch search", exact=False).click()
+                page.get_by_role("link", name="Source operations", exact=True).click()
                 page.locator("#seed").click()
                 expect(page.get_by_role("alert")).to_contain_text("Invalid admin token")
                 page.locator("#token").fill(token)
@@ -72,11 +76,14 @@ with (
                 expect(page.locator("#status")).to_contain_text(
                     '"created":120', timeout=30000
                 )
+                page.get_by_role("link", name="Search explorer", exact=True).click()
                 expect(page.locator("#results article")).to_have_count(12)
+                page.get_by_role("link", name="Source operations", exact=True).click()
                 page.locator("#seed").click()
                 expect(page.locator("#status")).to_contain_text(
                     '"unchanged":120', timeout=30000
                 )
+                page.get_by_role("link", name="Search explorer", exact=True).click()
                 page.get_by_role("button", name="Explain score").first.click()
                 expect(page.get_by_role("dialog")).to_contain_text("Lexical rank")
                 page.get_by_role("button", name="Useful match", exact=True).click()
@@ -95,6 +102,12 @@ with (
                 page.get_by_label("Retrieval mode").select_option("hybrid")
                 page.get_by_role("button", name="Search →", exact=True).click()
                 expect(page.locator("#results article")).to_have_count(12)
+                page.get_by_role("link", name="Saved searches", exact=True).click()
+                expect(page.locator(".saved-detail")).to_contain_text("python engineer")
+                page.get_by_role("link", name="Search explorer", exact=True).click()
+                with page.expect_download() as download:
+                    page.get_by_role("button", name="Export results", exact=True).click()
+                assert download.value.suggested_filename == "deltaindex-results.json"
                 page.locator("#token").fill("")
                 page.screenshot(path=str(assets / "desktop.png"), full_page=True)
                 page.get_by_role("button", name="Change theme").click()
